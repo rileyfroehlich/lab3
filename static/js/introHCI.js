@@ -17,14 +17,14 @@ function initializePage() {
 
 	// Add any additional listeners here
 	// example: $("#div-id").click(functionToCall);
-	$(".project").click(projectClick)
+	$("a.thumbnail").click(projectClick)
 	$("#myelement").click(changeText)
 }
 
 function projectClick(e){
 	console.log("Project clicked")
 	e.preventDefault()
-	//$(this).css("background-color", "green")
+	$(this).css("background-color", "green")
 
 	var containingProject = $(this).closest(".project");
 	var description = $(containingProject).find(".project-description");
